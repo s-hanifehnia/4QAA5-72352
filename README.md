@@ -17,6 +17,8 @@ docker compose exec django-web python manage.py createsuperuser
 
 Access API at http://localhost:8000/
 
+Access Swagger at http://localhost:8000/swagger/
+
 Access Admin at http://localhost:8000/admin/
 
 Run Tests:
