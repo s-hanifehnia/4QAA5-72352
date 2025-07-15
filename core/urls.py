@@ -25,6 +25,11 @@ from drf_spectacular.views import (
     SpectacularJSONAPIView,
 )
 
+
+api_urlpatterns = [
+    path("", include("booking.urls")),
+]
+
 swagger_urlpatterns = [
     path("schema/", SpectacularAPIView.as_view(), name="schema"),
     path(
@@ -32,13 +37,12 @@ swagger_urlpatterns = [
         SpectacularSwaggerView.as_view(url_name="schema"),
         name="swagger-ui",
     ),
-    path(
-        "redoc/", SpectacularRedocView.as_view(url_name="schema"), name="redoc"
-    ),
+    path("redoc/", SpectacularRedocView.as_view(url_name="schema"), name="redoc"),
     path("json/", SpectacularJSONAPIView.as_view(), name="json"),
 ]
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("api/", include(api_urlpatterns)),
     path("swagger/", include(swagger_urlpatterns)),
 ]

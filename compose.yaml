@@ -35,6 +35,7 @@ services:
       DATABASE_PASSWORD: ${DATABASE_PASSWORD}
       DATABASE_HOST: ${DATABASE_HOST}
       DATABASE_PORT: ${DATABASE_PORT}
+      SEAT_PRICE: ${SEAT_PRICE}
     env_file:
       - .env
 volumes:
