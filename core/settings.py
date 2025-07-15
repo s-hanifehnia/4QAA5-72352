@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     # 3th Parties
     "rest_framework",
     "drf_spectacular",
+    # Custom Apps
+    "booking",
 ]
 
 MIDDLEWARE = [
